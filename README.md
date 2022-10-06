@@ -9,7 +9,7 @@ am using my D&D 3e core rulebooks. I will probably deviate, though.
 
 ## What it does
 You name yourself then it displays default stats. I am only going to work on
-this when I do have free time. Unfortunatly, I don't have a lot of that with
+this when I do have free time. Unfortunately, I don't have a lot of that with
 all the other projects I am working on.
 
 ## Project goal
