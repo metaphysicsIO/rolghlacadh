@@ -1,0 +1,8 @@
+[ ] Create MENU, PLAY states
+[ ] Character creation
+ [ ] Select race
+ [ ] Select class
+ [ ] Roll stats
+ [ ] Allow stat save/movement 
+ [ ] Create saves
+
