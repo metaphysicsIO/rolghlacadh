@@ -1,10 +1,16 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 #include "player.h"
 
 // Constructor init
 Player::Player() : m_username("none"){
+
+    // Create seed.
+    srand(time(0));
+
     // TODO: Make this less sloppy, better defaults.
     m_attributes.resize(5);
     for(unsigned long int i = 0; i < m_attributes.size(); ++i)
@@ -19,6 +25,11 @@ Player::Player() : m_username("none"){
     m_attribute_names.at(4) = "CHA";
 }
 
+// Stat rolling
+int Player::Roll(int dice)
+{
+    return (rand() % dice);
+}
 
 void Player::Set_username(const std::string input_name)
 {

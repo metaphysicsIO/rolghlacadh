@@ -29,5 +29,11 @@ int main()
 
     player.Print_attributes();
 
+    for(int i = 0; i < 5; ++i)
+    {
+        std::cout << "rolling (20d): " << std::endl;
+        std::cout << player.Roll(20) << std::endl;
+    }
+
     return 0;
 }
