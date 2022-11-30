@@ -1,5 +1,5 @@
-[ ] Create MENU, PLAY states
-[ ] I should probably move the menu from game.cpp to main.cpp
+[x] Create MENU, PLAY states
+[x] I should probably move the menu from game.cpp to main.cpp
 [ ] I want to work more on the character creation screen.
  [ ] Create character
   [ ] Name
