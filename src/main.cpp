@@ -4,35 +4,77 @@
 #include "player.h"
 #include "game.h"
 
+enum states {MENU, CREATION, QUIT};
+
+states menu_select(char input);
+
 void clear_screen()
 {
     std::cout << "\033[2J\033[1;1H";
 }
 
+
+states menu()
+{
+    char input;
+
+    std::cout << "Welcome to rolghlacadh. (I know the 'o' lacks the fada.)" << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "\tc: Create character." << std::endl;
+    std::cout << "\tq: Quit." << std::endl;
+
+    std::cin >> input;
+
+    return menu_select(input);
+}
+
+states menu_select(char input)
+{
+    states change_state = MENU;
+
+    switch(input){
+        case 'c':
+            change_state = CREATION;
+            clear_screen();
+            break;
+        case 'q':
+            change_state = QUIT;
+            break;
+        default:
+            std::cout << "Bad input." << std::endl;
+            break;
+    }
+    return change_state;
+}
+
+
 int main()
 {
-    Game game;
+    // init state
+    states state;
+    // set state
+    state = MENU;
 
+    // init player
     Player player;
 
-    // Below is all testing.
-
-    game.menu(); 
-
-    clear_screen();
-
-    player.Set_username("username");
-
-    std::cout << "Hello, " << player.Get_username() << std::endl;
-
-    std::cout << "Stats: " << std::endl;
-
-    player.Print_attributes();
-
-    for(int i = 0; i < 5; ++i)
+    // menu loop
+    while(state == MENU)
     {
-        std::cout << "rolling (20d): " << std::endl;
-        std::cout << player.Roll(20) << std::endl;
+        clear_screen();
+        state = menu();
+    }
+
+    // character creation
+    if(state == CREATION)
+    {
+        player.Create();
+
+        // TODO: Next three lines are for tests. Delete later.
+        std::cout << "Hello, " << player.Get_username() << std::endl;
+        std::cout << "Stats: " << std::endl;
+        player.Print_attributes();
     }
 
     return 0;
