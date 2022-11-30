@@ -31,6 +31,20 @@ int Player::Roll(int dice)
     return (rand() % dice);
 }
 
+// Character creation
+void Player::Create()
+{
+    // TODO: Character creation screen.
+    std::cout << "TODO: Implement Player::Create()" << std::endl;
+}
+
+// TODO: Display stats
+void Player::Display()
+{
+    std::cout << "TODO: Implement Player::Display()" << std::endl;
+}
+
+
 void Player::Set_username(const std::string input_name)
 {
     std::cout << "Set your name: ";

@@ -10,6 +10,8 @@ class Player
     public:
         Player();
         int Roll(int dice);
+        void Create();
+        void Display();
         void Set_username(std::string input_name);
         std::string Get_username();
         void Set_attributes(int stat, int value);
