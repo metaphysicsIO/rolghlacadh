@@ -6,3 +6,10 @@
  [ ] Save character
   [ ] Add verification hash?
 
+[ ] View/Load character
+ [ ] Delete
+ [ ] Edit?
+
+[ ] Menu
+ [ ] Don't just exit after character creation!
+ [ ] Only exit if quit is activated.
