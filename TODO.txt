@@ -1,5 +1,6 @@
 [ ] Create character
  [ ] Properly implement race
+ [ ] Implement racial base stats
  [ ] Properly implement class
  [ ] Attributes
   [ ] Implement reallocation.
