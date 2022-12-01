@@ -2,11 +2,11 @@
 [x] I should probably move the menu from game.cpp to main.cpp
 [ ] I want to work more on the character creation screen.
  [ ] Create character
-  [ ] Name
+  [x] Name
   [x] Race -- For now this does nothing.
   [x] Class -- For now this does nothing.
-  [ ] Roll attributes
-   [ ] Select dump stat OR only allow purely random?
+  [x] Roll attributes
+   [x] Purely random rerolling. 
    [ ] Allow attrib-saving / attrib-moving
  [ ] Save created character
 
