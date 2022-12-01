@@ -4,6 +4,7 @@
 #include "player.h"
 #include "game.h"
 
+// TODO: load/view character
 enum states {MENU, CREATION, QUIT};
 
 states menu_select(char input);
@@ -59,6 +60,10 @@ int main()
     // init player
     Player player;
 
+
+    // TODO: Create play-state loop
+
+
     // menu loop
     while(state == MENU)
     {
@@ -71,10 +76,17 @@ int main()
     {
         player.Create();
 
-        // TODO: Next three lines are for tests. Delete later.
-        std::cout << "Hello, " << player.Get_username() << std::endl;
+        // Show what was created.
         player.Display();
+
+        // TODO: Offer to save character.
+
+        // Change back to menu state.
+        //state == MENU;
     }
+
+
+
 
     return 0;
 }

@@ -35,7 +35,17 @@ int Player::Roll(int dice)
 void Player::Create()
 {
     // TODO: Character creation screen.
-    std::cout << "TODO: Implement Player::Create()" << std::endl;
+    std::cout << "[Character creation]" << std::endl;
+
+    Set_username();
+
+    // TODO: Properly Set_race
+    Set_race("Human");
+    // TODO: Properly implement Set_class
+    Set_class("Adventurer");
+
+    // TODO: Don't forget racial bonuses and such.
+    Generate_stats();
 }
 
 void Player::Display()
@@ -48,10 +58,11 @@ void Player::Display()
 }
 
 
-void Player::Set_username(const std::string input_name)
+void Player::Set_username()
 {
     std::cout << "Set your name: ";
-    getline(std::cin, m_username);
+    std::cin.ignore();
+    std::getline(std::cin, m_username);
 }
 
 std::string Player::Get_username()
@@ -97,5 +108,39 @@ void Player::Print_attributes()
     {
         std::cout << "\t" << m_attribute_names.at(i) << ": ";
         std::cout << m_attributes.at(i) << std::endl;
+    }
+}
+
+void Player::Generate_stats()
+{
+    // Roll random stats
+    for(unsigned long int i = 0; i < m_attributes.size(); ++i)
+    {
+        m_attributes.at(i) = Roll(8);
+    }
+
+    // Display rolled values:
+    Print_attributes();
+
+    std::cout << "Reroll? (y/n)" << std::endl;
+
+    std::string answer;
+
+    std::cin >> answer;
+
+    // TODO: Clean this up a little bit.
+    // TODO: Save a stat, or select specific stat to
+    //       reroll?
+    if(answer == "y" || answer == "Y")
+    {
+        // Clear screen
+        std::cout << "\033[2J\033[1;1H";
+        // Print username
+        std::cout << "[Character creation]" << std::endl;
+        std::cout << "Name: " << Get_username() << std::endl;
+        std::cout << "Race: " << Get_race() << std::endl;
+        std::cout << "Class: " << Get_class() << std::endl;
+
+        Generate_stats();
     }
 }

@@ -12,7 +12,7 @@ class Player
         int Roll(int dice);
         void Create();
         void Display();
-        void Set_username(std::string input_name);
+        void Set_username();
         std::string Get_username();
         void Set_attributes(int stat, int value);
         int Get_attribute(int stat);
@@ -21,6 +21,7 @@ class Player
         void Set_class(std::string job);
         std::string Get_class();
         void Print_attributes();
+        void Generate_stats();
     private:
         std::string m_username;
         std::string m_race;
