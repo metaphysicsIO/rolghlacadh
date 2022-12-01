@@ -6,7 +6,7 @@
 #include "player.h"
 
 // Constructor init
-Player::Player() : m_username("none"){
+Player::Player() : m_username("none"), m_race("none"), m_class("none"){
 
     // Create seed.
     srand(time(0));
@@ -38,10 +38,13 @@ void Player::Create()
     std::cout << "TODO: Implement Player::Create()" << std::endl;
 }
 
-// TODO: Display stats
 void Player::Display()
 {
-    std::cout << "TODO: Implement Player::Display()" << std::endl;
+    //TODO: Make this prettier.
+    std::cout << "Name: " << Get_username() << std::endl;
+    std::cout << "Race: " << Get_race() << std::endl;
+    std::cout << "Class: " << Get_class() << std::endl;
+    Print_attributes();
 }
 
 
@@ -64,6 +67,28 @@ void Player::Set_attributes(int stat, int value)
 int Player::Get_attribute(int stat)
 {
     return m_attributes.at(stat);
+}
+
+void Player::Set_race(std::string race)
+{
+    m_race = race;
+}
+
+std::string Player::Get_race()
+{
+    //TODO: Implement race
+    return m_race;
+}
+
+void Player::Set_class(std::string job)
+{
+    // job because "class" is a protected word.
+    m_class = job;
+}
+std::string Player::Get_class()
+{
+    // TODO: Implement class
+    return m_class;
 }
 
 void Player::Print_attributes()

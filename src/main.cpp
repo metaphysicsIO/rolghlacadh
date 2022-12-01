@@ -73,8 +73,7 @@ int main()
 
         // TODO: Next three lines are for tests. Delete later.
         std::cout << "Hello, " << player.Get_username() << std::endl;
-        std::cout << "Stats: " << std::endl;
-        player.Print_attributes();
+        player.Display();
     }
 
     return 0;
