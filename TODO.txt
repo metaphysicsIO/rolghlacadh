@@ -1,12 +1,8 @@
-[x] Create MENU, PLAY states
-[x] I should probably move the menu from game.cpp to main.cpp
-[ ] I want to work more on the character creation screen.
- [ ] Create character
-  [x] Name
-  [x] Race -- For now this does nothing.
-  [x] Class -- For now this does nothing.
-  [x] Roll attributes
-   [x] Purely random rerolling. 
-   [ ] Allow attrib-saving / attrib-moving
- [ ] Save created character
+[ ] Create character
+ [ ] Properly implement race
+ [ ] Properly implement class
+ [ ] Attributes
+  [ ] Implement reallocation.
+ [ ] Save character
+  [ ] Add verification hash?
 
